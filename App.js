@@ -17,14 +17,14 @@ const validationSchema = Yup.object().shape({
     email: Yup.string()
         .label('Email')
         .email('Enter a valid email')
-        .required('Please enter a registered email'),
+        .required('Please enter your email address'),
     password: Yup.string()
         .label('Password')
-        .required()
+        .required('Please enter your password')
         .min(4, 'Password must have at least 4 characters')
 })
 
-export default function App({props}) {
+export default function App() {
     return (
         <KeyboardAvoidingView style={styles.avoidKeyboard} behavior="padding" enabled keyboardVerticalOffset={85}>
         <View style={styles.container}>
